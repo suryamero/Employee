@@ -18,7 +18,6 @@ public class EmployeeController {
         this.employee = employee;
         return "employee details successfully created";
     }
-
 @PutMapping
     public String updateEmployee(@RequestBody Employee employee) {
     this.employee = employee;
