@@ -1,4 +1,4 @@
-package com.example.EmployeeDetails;
+package com.example.EmployeeDetails.Model;
 
 public class Employee {
     private String employeeId;
@@ -9,7 +9,7 @@ public class Employee {
 
 
 
-    public Employee(String employeeId, String firstName, String lastName, String email, String phoneNumber) {
+    public Employee() {
         this.employeeId = employeeId;
         this.firstName = firstName;
         this.lastName = lastName;
