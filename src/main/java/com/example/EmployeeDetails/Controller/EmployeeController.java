@@ -24,6 +24,7 @@ public EmployeeController(EmployeeService  employeeService) {
     return employeeService.save(employee);
     }
 
+
     @GetMapping
     public List<Employee> getAll(){
         return employeeService.getAll();
