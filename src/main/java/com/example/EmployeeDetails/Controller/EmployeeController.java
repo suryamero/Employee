@@ -7,31 +7,32 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/employee")
+@RequestMapping("/employees")
 
 public class EmployeeController {
 
     private final EmployeeService employeeService;
 
-public EmployeeController(EmployeeService  employeeService) {
+    public EmployeeController(EmployeeService employeeService) {
 
-    this.employeeService = employeeService;
-}
-
-
-@PostMapping
-        public Employee save(@RequestBody Employee employee){
-    return employeeService.save(employee);
+        this.employeeService = employeeService;
     }
 
+
+    @PostMapping
+    public Employee save(@RequestBody Employee employee) {
+        return employeeService.save(employee);
+    }
+
+
     @GetMapping
-    public List<Employee> getAll(){
+    public List<Employee> getAll() {
         return employeeService.getAll();
     }
 
-    @DeleteMapping("{/employeeId}")
-    public void delete(@PathVariable String employeeId){
-    employeeService.delete (employeeId);
+    @DeleteMapping("/{employeeId}")
+    public void delete(@PathVariable String employeeId) {
+        employeeService.delete(employeeId);
     }
 }
 
